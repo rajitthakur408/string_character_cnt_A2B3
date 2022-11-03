@@ -1,0 +1,42 @@
+Input - AAAABBBCCDAABB
+
+Output - A4B3C2D1A2B2
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //will iterate a loop throughout the string 
+    // if str[i]=str[i+1] increase count by one (here only we need to increase i++)
+    //if not then newstring = newstring+str[i]+count
+    // we will be having new string
+    let str = 'AAAABBBCCDAABB'
+    let count = 1;
+    let newstr = ''
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === str[i + 1]) {
+            count++
+        }
+        else {
+            newstr = newstr + str[i] + count
+            count = 1
+        }
+    }
+    console.log(newstr);
+//--------------------------------------------------------------------------------
+
+
+</script>
+
+</html>
